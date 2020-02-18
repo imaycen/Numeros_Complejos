@@ -175,7 +175,7 @@ unsigned k;
 r = magnitud(z[0], z[1]);
 theta = argumento(z[0], z[1]);
 //De Moivre
-cout << "RAICES - T. de De Moivre" << endl;
+cout << "RAICES - T. de De Moivre para z: Re = " << z[0] << ", Im = " << z[1] << endl;
 for(k=0; k<n; ++k)
    {
     zk[0] = pow(r, (1/n)) * cos( (theta - 2*M_PI*k)/n );
