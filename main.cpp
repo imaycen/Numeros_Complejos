@@ -32,17 +32,24 @@ int main( )
 double r, theta, angulo;
 double z[2], w[2], aux[2]; 
 
-z[0] = 3;
-z[1] = 2;
+z[0] = 1;
+z[1] = 1;
 w[0] = 1;
-w[1] = -2;
+w[1] = 2;
 
+//Determina cociente z/w
 cociente_complejos(z, w, aux);
 
 //Imprime resultados
 cout << "Parte real       :" << aux[0] << endl;
 cout << "Parte imaginaria :" << aux[1] << endl;
 
+//Determina raices por T. de De Moivre
+// 5 raices para z = 1+i
+raices_de_moivre(z, aux, 5)
+
+// 6 raices para w = 1+2i
+raices_de_moivre(w, aux, 6)
 
 return 0;
 }
@@ -153,6 +160,26 @@ void conjugado_complejos(double* z, double* conj)
 
 conj[0] = z[0];
 conj[1] = -z[1];
-
+}
+//********************************************************
+// Funcion para efectuar el calculo de n raices de z = re + i * im 
+//
+// Input  : z = z[0], z[1]
+// Output : impresion de raices zk
+//********************************************************
+void raices_de_moivre(double* z, double* zk, unsigned n)
+{
+double r, theta;
+unsigned k;
+r = magnitud(z[0], z[1]);
+theta = argumento(z[0], z[1])
+//De Moivre
+for(k=0; k<n; ++k)
+   {
+    zk[0] = pow(r, (1/n)) * cos( (theta - 2*M_PI*k)/n );
+    zk[1] = pow(r, (1/n)) * sin( (theta - 2*M_PI*k)/n );
+    //Imprime raiz calculada
+    cout << "k = " << k << " : " << "Re = " << zk[0] << ", " << "Im = " <<zk[1] << endl;
+   }
 }
 
