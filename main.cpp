@@ -23,6 +23,7 @@ void suma_complejos(double* z, double* w, double* sum);
 void producto_complejos(double* z, double* w, double* prod);
 void cociente_complejos(double* z, double* w, double* div);
 void conjugado_complejos(double* z, double* conj);
+void raices_de_moivre(double* z, double* zk, unsigned n)
 
 using namespace std;
 
