@@ -39,18 +39,18 @@ w[0] = 1;
 w[1] = 2;
 
 //Determina cociente z/w
-cociente_complejos(z, w, aux);
+//cociente_complejos(z, w, aux);
 
 //Imprime resultados
-cout << "Parte real       :" << aux[0] << endl;
-cout << "Parte imaginaria :" << aux[1] << endl;
+//cout << "Parte real       :" << aux[0] << endl;
+//cout << "Parte imaginaria :" << aux[1] << endl;
 
 //Determina raices por T. de De Moivre
 // 5 raices para z = 1+i
-raices_de_moivre(z, aux, 5)
+raices_de_moivre(z, aux, 5);
 
 // 6 raices para w = 1+2i
-raices_de_moivre(w, aux, 6)
+raices_de_moivre(w, aux, 6);
 
 return 0;
 }
@@ -173,8 +173,9 @@ void raices_de_moivre(double* z, double* zk, unsigned n)
 double r, theta;
 unsigned k;
 r = magnitud(z[0], z[1]);
-theta = argumento(z[0], z[1])
+theta = argumento(z[0], z[1]);
 //De Moivre
+cout << "RAICES - T. de De Moivre" << endl;
 for(k=0; k<n; ++k)
    {
     zk[0] = pow(r, (1/n)) * cos( (theta - 2*M_PI*k)/n );
