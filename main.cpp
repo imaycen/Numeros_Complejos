@@ -5,7 +5,7 @@
 // Compiler       : g++
 // Revisions      :
 //        Initial : 16.02.2017
-//           Last : 
+//           Last : 18.02.2020
 
 // Este programa compila en la consola de linux mediante la orde
 // g++ main.cpp -o complejo
@@ -179,7 +179,7 @@ for(k=0; k<n; ++k)
     zk[0] = pow(r, (1/n)) * cos( (theta - 2*M_PI*k)/n );
     zk[1] = pow(r, (1/n)) * sin( (theta - 2*M_PI*k)/n );
     //Imprime raiz calculada
-    cout << "k = " << k << " : " << "Re = " << zk[0] << ", " << "Im = " <<zk[1] << endl;
+    cout << "k = " << k << " : " << "Re = " << zk[0] << ", " << "Im = " << zk[1] << endl;
    }
 }
 
